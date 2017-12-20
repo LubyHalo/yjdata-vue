@@ -1,6 +1,6 @@
 # vue-qxdata
 
-> A Vue.js project
+> 研究项目（Vue重构-试行）
 
 ## Build Setup
 
