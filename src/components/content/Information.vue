@@ -53,7 +53,7 @@
                     <template slot-scope="scope">
                         <el-button size="mini" @click="viewRow(scope.$index, scope.row)"><i class="fa fa-info-circle"></i>查看</el-button>
                         <el-button size="mini" @click="editRow(scope.$index, scope.row)"><i class="fa fa-pencil"></i>编辑</el-button>
-                        <!-- <el-popover
+                        <el-popover
                             ref="popover"
                             placement="top"
                             width="160"
@@ -64,7 +64,7 @@
                                 <el-button size="mini" type="text" @click="popVisible = false">取消</el-button>
                                 <el-button type="primary" size="mini" @click="popVisible = false">确定</el-button>
                             </div>
-                        </el-popover> -->
+                        </el-popover>
                         <el-button v-popover:popover  size="mini" @click.native.prevent="deleteRow(scope.$index, tableData.rows)" type="danger"><i class="fa fa-trash"></i>删除</el-button>
                         
                     </template>
@@ -248,7 +248,6 @@ import api from './../../axios/api.js'
                 pageSize: this.pageSizeChange,
                 currentPage: this.currentPageChange
             }
-            console.log(this.apiParams);
             api.infoRow('/test/table1', this.apiParams)
             .then(res => {
                 console.log(res);

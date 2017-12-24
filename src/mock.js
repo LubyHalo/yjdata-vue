@@ -3,10 +3,13 @@ const Mock = require('mockjs');
 // 获取 mock.Random 对象
 const Random = Mock.Random;
 // mock一组数据
-const tableData1 = function() {
+const tableData1 = function(params) {
     let tableData = {};
     let articles = [];
     let total = Random.natural(10, 60);
+    let postParams = JSON.parse(params.body);
+    let currentPage = postParams.currentPage;
+    let pageSize = postParams.pageSize;
     for (let i = 0; i <total; i++) {
         let rows = {
             address: Random.county(true), // Random.dataImage( size, text ) 生成一段随机的 Base64 图片编码
