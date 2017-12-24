@@ -103,8 +103,8 @@
                     </el-form-item>
                     <el-form-item label="活动区域：" :label-width="formLabelWidth">
                         <el-select class="full-width" v-model="form.region" placeholder="请选择活动区域" :disabled='formDisabled'>
-                            <el-option label="区域一" value="shanghai"></el-option>
-                            <el-option label="区域二" value="beijing"></el-option>
+                            <el-option label="上海" value="1"></el-option>
+                            <el-option label="北京" value="2"></el-option>
                         </el-select>
                     </el-form-item>
                 </el-form>
@@ -179,7 +179,7 @@ import api from './../../axios/api.js'
         currentPageChange: '1',
         pageSize: 10,
         pageSizeChange: '10',
-        apiParams: {},
+        apiParams: {pageSize: "10", currentPage: "1"},
         rules1: {
             date: { required: true, message: '请输入日期', trigger: 'blur' },
             name: { required: true, message: '请输入姓名', trigger: 'blur' },

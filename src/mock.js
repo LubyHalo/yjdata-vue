@@ -6,11 +6,13 @@ const Random = Mock.Random;
 const tableData1 = function(params) {
     let tableData = {};
     let articles = [];
-    let total = Random.natural(10, 60);
+    let total = 60;
+    // let total = Random.natural(10, 60);
     let postParams = JSON.parse(params.body);
     let currentPage = postParams.currentPage;
     let pageSize = postParams.pageSize;
-    for (let i = 0; i <total; i++) {
+    console.log(postParams);
+    for (let i = 0; i <pageSize; i++) {
         let rows = {
             address: Random.county(true), // Random.dataImage( size, text ) 生成一段随机的 Base64 图片编码
             name: Random.cname(), // Random.cname() 随机生成一个常见的中文姓名
