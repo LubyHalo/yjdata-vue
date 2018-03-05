@@ -8,8 +8,8 @@
                 background-color="#f0f5f6"
                 text-color="#666"
                 active-text-color="#333"
-                unique-opened="true">
-                    <el-submenu v-for="(parentBtn,parentBtnIndex) in parentBtns" :key="parentBtn.title" :index="parentBtnIndex">
+                unique-opened>
+                    <el-submenu v-for="(parentBtn,parentBtnIndex) in parentBtns" :key="parentBtn.title" :index="'x'+parentBtnIndex">
                         <template slot="title">
                             <i class="fa" :class="parentBtn.icon"></i>
                             <span>{{parentBtn.title}}</span>
